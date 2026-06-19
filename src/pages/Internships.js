@@ -12,7 +12,7 @@ export default function Internships() {
   const [search, setSearch] = useState(searchParams.get('q') || '');
   const [location, setLocation] = useState('All');
   const [category, setCategory] = useState(searchParams.get('category') || 'All');
-  const [stipendMin, setStipendMin] = useState('');
+  const [setStipendMin] = useState('');
 
   const filtered = useMemo(() => {
     return INTERNSHIPS.filter(i => {

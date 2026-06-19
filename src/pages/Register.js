@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import './Auth.css';
 
 export default function Register() {
-  const { register, login } = useApp();
+  const { register } = useApp();
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: '', email: '', phone: '', password: '', confirm: '', college: '', degree: '' });
   const [errors, setErrors] = useState({});

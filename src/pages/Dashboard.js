@@ -4,7 +4,7 @@ import { useApp, PLANS } from '../context/AppContext';
 import './Dashboard.css';
 
 export default function Dashboard() {
-  const { user, getUserApplications, INTERNSHIPS } = useApp();
+  const { user, getUserApplications } = useApp();
   const myApplications = getUserApplications();
   const plan = PLANS.find(p => p.id === user.plan);
   const appliedCount = user.applicationsThisMonth || 0;

@@ -30,7 +30,6 @@ export default function ResumeBuilder() {
   const [otp, setOtp] = useState('');
   const [showOTP, setShowOTP] = useState(false);
   const [photoPreview, setPhotoPreview] = useState(null);
-  const [resumeGenerated, setResumeGenerated] = useState(false);
 
   const isPremium = user?.plan === 'gold' || user?.plan === 'silver' || user?.plan === 'bronze';
 
@@ -65,7 +64,6 @@ export default function ResumeBuilder() {
     setTimeout(() => {
       const resumeData = { ...form, photoPreview };
       saveResume(resumeData);
-      setResumeGenerated(true);
       setStep('preview');
     }, 800);
     return true;
